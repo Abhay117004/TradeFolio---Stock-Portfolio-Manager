@@ -88,8 +88,8 @@ Replace `YOUR_SUPABASE_URL` and `YOUR_SUPABASE_ANON_KEY` with your actual Supaba
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/tradefolio.git
-   cd tradefolio
+   git clone https://github.com/Abhay117004/TradeFolio---Stock-Portfolio-Manager.git
+   cd TradeFolio---Stock-Portfolio-Manager
    ```
 
 2. **Install frontend dependencies:**
@@ -128,7 +128,7 @@ Replace `YOUR_SUPABASE_URL` and `YOUR_SUPABASE_ANON_KEY` with your actual Supaba
    ```
 
 8. **Access the app:**
-   - Open [http://localhost:3000](http://localhost:3000) in your browser.
+   - Open your Flask link
 
 ## Usage
 
@@ -143,7 +143,7 @@ Replace `YOUR_SUPABASE_URL` and `YOUR_SUPABASE_ANON_KEY` with your actual Supaba
    ```
 
 3. **Access the app:**
-   - Open [http://localhost:3000](http://localhost:3000) in your browser.
+   - Open your Vite Link
 
 ## Environment Variables
 
@@ -159,8 +159,8 @@ Required in `.env`:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/tradefolio.git
-   cd tradefolio
+   git clone https://github.com/Abhay117004/TradeFolio---Stock-Portfolio-Manager.git
+   cd TradeFolio---Stock-Portfolio-Manager
    ```
 
 2. **Install frontend dependencies:**
