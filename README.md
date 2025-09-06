@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
+[![Vite](https://img.shields.io/badge/Build-Vite-646CFF.svg)](https://vitejs.dev/)
 [![Supabase](https://img.shields.io/badge/Database-Supabase-green.svg)](https://supabase.io/)
 
 </div>
@@ -39,7 +39,7 @@ TradeFolio is a full-stack web application designed to help users manage their i
 
 | Component | Technology Used |
 |-----------|----------------|
-| **Frontend** | HTML, CSS, JavaScript, Vite |
+| **Frontend** | HTML, CSS, JavaScript, Vite (for development) |
 | **Backend** | Python, Flask |
 | **Database & Auth** | Supabase (PostgreSQL) |
 | **APIs** | RapidAPI (Real-Time Finance & News Data) |
@@ -47,9 +47,8 @@ TradeFolio is a full-stack web application designed to help users manage their i
 ## 📋 Prerequisites
 
 ### Software Requirements
-- **Node.js**: Version 16.0.0 or higher - [Download](https://nodejs.org/)
 - **Python**: Version 3.8 or higher - [Download](https://www.python.org/downloads/)
-- **npm**: Comes bundled with Node.js
+- **Node.js & npm**: Required only to run Vite for frontend development - [Download](https://nodejs.org/)
 
 ### Account Requirements
 - **Supabase Account**: Required for the database and user authentication - [Sign up](https://supabase.io/)
@@ -108,9 +107,9 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-**Frontend (Node.js)**
+**Frontend (Vite Development Server)**
 ```bash
-# Install dependencies from package.json
+# Install Vite and frontend dependencies
 npm install
 ```
 
@@ -125,15 +124,17 @@ python run.py
 # The backend will start on http://localhost:5000
 ```
 
-### Start the Frontend Server:
+### Start the Frontend Development Server:
 ```bash
 # Run this command in a new terminal window
 npm run dev
-# The frontend will be available at http://localhost:5173
+# Vite will serve the frontend at http://localhost:5173
 ```
 
 ### Access the Application:
 Open your browser and navigate to the frontend URL: [http://localhost:5173](http://localhost:5173)
+
+**Note**: Node.js is only used to run Vite for frontend development. The actual application is built with Python/Flask backend and vanilla JavaScript frontend.
 
 ## 📁 Project Structure
 
