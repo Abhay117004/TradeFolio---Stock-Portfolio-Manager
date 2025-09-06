@@ -1,0 +1,22 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Force specific file types to have Unix line endings
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Force batch files to have Windows line endings
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
