@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
-    const agreeTermsCheckbox = document.getElementById('agreeTerms');
     const generalError = document.getElementById('generalError');
     const signupBtn = document.getElementById('signupBtn');
     const passwordToggle = document.getElementById('passwordToggle');
@@ -68,11 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
             errors.confirmPassword = "Please confirm your password.";
         } else if (password !== confirmPassword) {
             errors.confirmPassword = "Passwords do not match.";
-        }
-
-        // Terms agreement validation
-        if (!agreeTermsCheckbox.checked) {
-            errors.agreeTerms = "You must agree to the Terms of Service.";
         }
 
         return Object.keys(errors).length > 0 ? errors : null;
@@ -172,3 +166,4 @@ document.addEventListener('DOMContentLoaded', function() {
         firstNameInput.focus();
     }
 });
+    

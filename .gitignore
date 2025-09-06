@@ -1,34 +1,28 @@
-# Python
+# Environment files
+.env
+.env.local
+.env.production
+
+# Supabase config with real credentials
+frontend/src/scripts/config/supabase.js
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# Environment
-.env
-*.env
-*.env.local
-.env.local
-frontend/src/scripts/config/supabase.js
-frontend/.package-lock.json
-# Databases
-*.sqlite3
-*.db
+# Virtual environment
+TRADEFOLIO/
+venv/
+env/
 
-# Node
+# Node modules
 node_modules/
-frontend/node_modules/
-frontend/dist/
-frontend/build/
-dist/
-build/
 
-# VSCode
-.vscode/
-
-# OS
+# OS files
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# IDE files
+.vscode/
+.idea/

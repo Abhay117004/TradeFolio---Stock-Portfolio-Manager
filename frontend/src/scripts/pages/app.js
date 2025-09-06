@@ -1,4 +1,3 @@
-// Import from the config file instead of hardcoding
 import { supabaseClient as _supabase } from '../config/supabase.js';
 
 const App = {
@@ -277,10 +276,15 @@ const App = {
 
         const actions = {
             '.delete-portfolio-btn': el => {
+                e.preventDefault();
                 e.stopPropagation(); 
                 this.deletePortfolio(el.dataset.id);
             },
-            '.portfolio-card': el => this.getPortfolioDetails(el.dataset.id),
+            '.portfolio-card': el => {
+                if (!e.target.closest('.delete-portfolio-btn')) {
+                    this.getPortfolioDetails(el.dataset.id);
+                }
+            },
             '#show-create-portfolio-modal': () => this.showModal('create-portfolio-modal'),
             '.show-add-stock-modal': el => this.showStockSelectionModal(el.dataset.id),
             '.delete-holding-btn': el => this.deleteHolding(el.dataset.id),
@@ -438,7 +442,7 @@ const App = {
     },
 
     deletePortfolio(id) {
-        const portfolio = this.state.portfolios.data.find(p => p.id === parseInt(id));
+        const portfolio = this.state.portfolios.data.find(p => p.id === id);
         if (!portfolio) return;
 
         const message = document.getElementById('confirmation-message');
@@ -457,9 +461,11 @@ const App = {
 
         const result = await this.apiCall(`/portfolios/${id}`, { method: 'DELETE' });
         if (result) {
-            this.state.portfolios.data = this.state.portfolios.data.filter(p => p.id !== parseInt(id));
+            // CHANGE HERE: Removed parseInt() for UUID comparison
+            this.state.portfolios.data = this.state.portfolios.data.filter(p => p.id !== id);
             this.renderPortfolioList();
-            if (this.state.currentPortfolio?.id === parseInt(id)) {
+            // CHANGE HERE: Removed parseInt() for UUID comparison
+            if (this.state.currentPortfolio?.id === id) {
                 this.showView('portfolios-view');
             }
             this.showNotification('Portfolio deleted successfully.', 'success');
@@ -470,7 +476,7 @@ const App = {
         this.showView('portfolio-detail-view');
         this.showLoading(true);
 
-        const portfolio = this.state.portfolios.data.find(p => p.id === parseInt(id));
+        const portfolio = this.state.portfolios.data.find(p => p.id === id); 
         if (!portfolio) {
             this.showView('portfolios-view');
             this.showLoading(false);

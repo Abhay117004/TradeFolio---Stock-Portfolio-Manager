@@ -152,7 +152,7 @@
     font-size: var(--font-size-sm);
     margin-top: var(--spacing-sm);
     display: block;
-    min-height: 1.2em;
+    /* min-height: 1.2em; */ /* This was creating the extra space */
     font-weight: 500;
     background: var(--danger-bg);
     padding: var(--spacing-xs) var(--spacing-sm);
@@ -164,6 +164,7 @@
     background: transparent;
     border: none;
     padding: 0;
+    margin-top: 0;
 }
 
 /* Checkbox & Links */
