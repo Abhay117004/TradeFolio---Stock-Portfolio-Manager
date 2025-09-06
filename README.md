@@ -120,7 +120,7 @@ You need to run both the backend and frontend servers simultaneously in separate
 ### Start the Backend Server:
 ```bash
 # Make sure your Python virtual environment is activated
-python run.py
+python -m backend.run
 # The backend will start on http://localhost:5000
 ```
 
