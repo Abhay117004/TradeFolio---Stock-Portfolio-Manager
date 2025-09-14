@@ -121,7 +121,7 @@ You need to run both the backend and frontend servers simultaneously in separate
 ```bash
 # Make sure your Python virtual environment is activated
 python -m backend.run
-# The backend will start on http://localhost:5000
+# The backend will start on http://localhost:5001
 ```
 
 ### Start the Frontend Development Server:
